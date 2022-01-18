@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="Mcontainer">
+        <!-- navbar -->
+        <div id="Mnavbar">
+           
+        </div>
+
+        <!-- navyBlue -->
+        <div id="Mnavy">
+            <img id="navy_icon" src="./images/HomeIcon.png">
+            <h3 class="navy_text1">Order Paan items, munchies and much more on our new Dunzo Mo app</h3>
+            <h3 class="navy_text2">Download Dunzo Mo app now ></h3>
+        </div>
+
+        <!-- MainImage -->
+        <div id="MmainImg">
+            <img id="main_Img" src="./images/home1.jpg">
+        </div>
+
+        <!-- Grid1 -->
+        <div id="Mgrid1">
+            <h1 id="name">Essentials delivered to your doorstep</h1>
+            <div id="grid1">
+                <a href="#"><img id="groceries" src="./images/Home_Grid1_img1.png"></a>
+                <a href="#"><img id="pickup" src="./images/Home_Grid1_img2.png"></a>
+                <a href="#"><img id="restaurant" src="./images/Home_Grid1_img1.png"></a>
+                <a href="#"><img id="fruits" src="./images/Home_Grid1_img4.png"></a>
+            </div>
+            <div id="grid2">
+                <div><a href="#"><img id="meat" src="./images/Home_Grid2_img1.png"></a><p>Meat and Fish</p></div>
+                <div><a href="#"><img id="pet" src="./images/Home_Grid2_img2.png"></a><p>Pet Supplies</p></div>
+                <div><a href="#"><img id="paan" src="./images/Home_Grid2_img3.png"></a><p>Paan Shop</p></div>
+            </div>
+        </div>
+
+        <!-- Grid2 -->
+        <div id="Mgrid2">
+            <h1 id="name">Top Picks for you</h1>
+            <h1 class="dash">---</h1>
+            <div id="grid1">
+                <img id="bizzy" src="./images/Home_Grid3_img1.jpg">
+                <img id="shelf" src="./images/Home_Grid3_img2.jpg">
+                <img id="bite" src="./images/Home_Grid3_img3.jpg">
+                <img id="move" src="./images/Home_Grid3_img4.jpg">
+            </div>
+        </div>
+
+        <!-- Mobile Part -->
+        <div id="Mmobile">
+            <div id="mobile_img">
+                <img id="mobile" src="./images/dunzo_mobile.png" />
+            </div>
+            <div id="mobile_right">
+                <h3 class="name1">All this from the convenience of your phone.</h3>
+                <h3 class="name3">Download the Dunzo mobile app.</h3>
+                    <img id="google" src="./images/googleapple.png">
+            </div>
+            <div></div>
+        </div>
+
+    </div>
+
+    <!-- Footer Part -->
+    <div id="footer">
+        
+    </div>
+
+</body>
+</html>
+
+
+
+<script type="module">
+
+// navbar Dynamic
+import navbar from './components/navbar.js';
+
+let navbar_container = document.getElementById('Mnavbar');
+
+navbar_container.innerHTML = navbar()
+
+
+// footer Dynamic
+import footer from './components/footer.js';
+
+let footer_container = document.getElementById('footer');
+
+footer_container.innerHTML = footer()
+
+
+</script>
