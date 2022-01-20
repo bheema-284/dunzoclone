@@ -13,7 +13,10 @@ function navbar(){
      <img id="icon_cart" src="./images/cart.png">
      <p id="icon2">Cart</p>
     </div>
-    <button id="nav_signin">Sign in</button>`
+    <div id="nav_account">
+        <img id="icon_profile" src="./images/account.png">
+        <p id="icon3">Profile</p>
+       </div>`
 }
 
 export default navbar
