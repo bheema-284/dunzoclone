@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+    <link rel="stylesheet" href="./styles/grocires.css">
+</head>
+<body>
+    <!-- navbar -->
+        <div id="Mnavbar">
+           
+        </div>
+
+        <!-- navyBlue -->
+        <div id="Mnavy">
+            <img id="navy_icon" src="./images/HomeIcon.png">
+            <div id="Mnavy-text">
+                <h3 class="navy_text1">Order Paan items, munchies and much more on our new Dunzo Mo app</h3>
+            <h3 class="navy_text2">Download Dunzo Mo app now ></h3>
+            </div>
+        </div>
+
+    <div id="hed">
+        <p id="home1">Home->Hyderabad->Kondapur</p>
+        <div id="inhed">
+            <div id="imgd">
+            <img id="img" src="https://ik.imagekit.io/dunzo/icons/website/bluegreen/category/grocery.png?tr=w-88,h-88,cm-pad_resize" alt="">
+        
+        </div>
+        <div id="con">
+        <h2>Ratnadeep Super Market in Hyderabad </h2>
+        <p id="loc">Kondapur</p>
+        </div>
+        
+        </div>
+    </div>
+    <hr>
+        <div id="serdiv">
+            <div id="ser-lis">
+            <input type="text" name="" id="inp" placeholder="Search in SUPERMARKETS">
+        </div>
+        </div>
+        <hr>
+    <div id="fandv">  
+        <div id="list-item">
+         <p id="itm">Breakfast & Dairy</p>
+          <p id="itm">Privisions</p>
+           <p id="itm">Condiments</p>
+            <p id="itm">Chocolates & Ice Cream</p>
+             <p id="itm">Baby Cares</p>
+              <p id="itm">Personal Care</p>
+               <p id="itm">Pooja Needs</p>
+                <p id="itm">Snakes</p>
+                 <p id="itm">Kirana</p>
+                  <p id="itm">Beverages</p>
+                   <p id="itm">Instant Foods</p>
+                    <p id="itm">Cleaning & Households</p>
+                     <p id="itm">Daily Needs</p>
+        </div>  
+         
+    <div id="martdata">        
+            <h1 id="h1">Breakfast & Dairy</h1>         
+    </div>
+   <div id="fvCart">
+        <h1>Your Cart</h1>        
+        <h2 id="item"></h2>
+       
+        <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/no-items-in-cart-7e84056f44993b68d14184f9b2992af7.png" alt="">
+        <ul id="ful">
+            <p>Your cart is empty Add items to get started</p>
+        </ul>
+        <button id="check"><h3 id="co"></h3></button>
+    </div>
+    </div>
+    <div id="footer">
+        
+    </div>
+</body>
+
+</html>
+
+<script type="module">
+    let n=0;
+    let sum=0;
+  
+  let data_div=document.querySelector("#martdata");
+  
+let co=document.querySelector("#co");
+   
+  import mart from "./scripts/grocires.js"
+  // navbar Dynamic
+import navbar from './components/navbar.js';
+
+let navbar_container = document.getElementById('Mnavbar');
+
+navbar_container.innerHTML = navbar()
+
+
+// footer Dynamic
+import footer from './components/footer.js';
+
+let footer_container = document.getElementById('footer');
+
+footer_container.innerHTML = footer()
+
+  mart.forEach(el=>{
+    // console.log(el)
+    let ful=document.querySelector("#ful")
+    let button=document.createElement("button");
+    let div2=document.createElement("div");
+    let div=document.createElement("div");
+    let img=document.createElement("img");
+    let fh=document.createElement("h4");
+    img.src=el.image;
+    let rn=Math.floor(Math.random()*100)
+    let h4=document.createElement("h4")
+    h4.textContent=`₹${rn} for 1 kg`
+    fh.textContent=el.selection1;
+    button.textContent="+ ADD"
+    button.addEventListener("click",cta)
+    function cta(){
+        n+=1;
+        sum+=rn;
+        let li=document.createElement("p");
+        fvCart.textContent=`${n} Item`
+        co.textContent=` Checkout ₹${sum}`  
+        ful.innerHTML = null;    
+        li.textContent=`${el.selection1} || 1 kg || ₹${rn}.00`;        
+        let rem=document.createElement("button")
+        rem.textContent="Remove"
+        rem.addEventListener("click",remo);
+        function remo(){
+            li.remove()
+            n-=1;
+            
+            sum-=rn;
+            console.log(sum,n)
+            fvCart.textContent=`${n} Item`
+        co.textContent=` Checkout ₹${sum}`
+        }
+        console.log(sum,n)
+        li.append(rem)
+        ful.append(li)
+        console.log(n)
+    
+    }
+    div2.append(fh,h4,button)
+   div.append(img,div2);
+   data_div.append(div)
+  
+    
+})
+
+let fvCart=document.querySelector("#item");
+
+
+</script>
