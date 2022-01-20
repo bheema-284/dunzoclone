@@ -1,0 +1,45 @@
+#fandv {
+    display: grid;
+    /* justify-content:space-around; */
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+   
+}
+#fruitss img{
+   width: 25%;
+   height: 100%;
+   
+}
+#vegetabless img{
+  width: 30%;
+ height: 100%;
+}
+#fruitss>div{
+    display: flex;
+    margin-top: 5%;
+}
+
+#vegetabless>div{
+    display: flex;
+    margin-top: 5%;
+    justify-content: left;
+    
+}
+#fvCart img{
+    width: 50%;
+
+}
+#fvCart{
+    text-align: center;
+}
+#vegetabless>div{
+    margin-right: 0;
+}
+#vegetabless{
+    text-align: left;
+    border-right:1px solid black ;
+}
+#fruitss{
+    border-right: 1px solid black;
+}
+
