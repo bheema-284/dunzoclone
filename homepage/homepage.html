@@ -21,6 +21,21 @@
             <h3 class="navy_text2">Download Dunzo Mo app now ></h3>
         </div>
 
+        <!-- Location Popup -->
+        <div id="Search_loc_container">
+            <div id="display_location">
+                <h4 id="loc_name">Add your Location</h4>
+                <button id="loc_cancel">X</button>
+            </div>
+            <br>
+            <div id="search_location">
+                <input type="text" id="loc_places">
+                <button id="loc_submit">O</button>
+            </div>
+            <div id="loc_content"></div>
+            <img id="loc_boy" src="./images/location_boy.png">
+        </div>
+
         <!-- Login Popup
         <div class="form-popup" id="myForm">
             <button id="cancel" type="button" class="btn cancel">X</button>
@@ -139,6 +154,26 @@ footer_container.innerHTML = footer()
 
 
 
+var location = document.getElementById('nav_location').addEventListener('click', displayLocation);
+var closeLocation = document.getElementById('loc_cancel').addEventListener('click', closelocation);
+
+function displayLocation(){
+
+    document.getElementById('Search_loc_container').style.display = 'block';
+    document.getElementById('MmainImg').style.display = "none";
+    document.getElementById('Mgrid1').style.display = "none";
+    document.getElementById('Mgrid2').style.display = "none";
+    document.getElementById('Mmobile').style.display = "none";
+}
+
+function closelocation(){
+    document.getElementById('Search_loc_container').style.display = 'none';
+    document.getElementById('MmainImg').style.display = "block";
+    document.getElementById('Mgrid1').style.display = "block";
+    document.getElementById('Mgrid2').style.display = "block";
+    document.getElementById('Mmobile').style.display = "block";
+}
+
 // //Login Popup
 // var openLogin = document.getElementById('nav_signin').addEventListener('click', openForm);
 // var closeLogin = document.getElementById('cancel').addEventListener('click', closeForm);
@@ -182,5 +217,38 @@ footer_container.innerHTML = footer()
 //   document.getElementById('Mgrid2').style.display = "block";
 //   document.getElementById('Mmobile').style.display = "block";
 // }
+
+
+let display_location = document.getElementById('loc_submit').addEventListener('click', displayMap);
+
+async function displayMap(){
+
+let places = document.getElementById('loc_places').value;
+
+let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${places}&appid=b583ff57ac8a4cb13f0ac928e8d36ddf&units=metric`);
+
+let data = await res.json();
+append(data)
+console.log(data);
+}
+
+function append(e){
+
+    var div = document.createElement('div');
+
+    var place = document.createElement('h4');
+    place.textContent = e.name;
+    place.setAttribute('class', 'place');
+
+    place.addEventListener('click', function(){
+
+        document.getElementById('location_place').textContent = e.place;
+    });
+
+    div.append(place);
+    document.getElementById('loc_content').append(div)
+}
+
+
 
 </script>
