@@ -176,7 +176,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
             document.getElementById("pay").append(pay)
             document.getElementById("rules").textContent=null
             let amount = document.createElement("p")
-            amount.textContent = `₹ ${Math.round(Math.random(30)*200)}`
+            amount.textContent = `₹ ${Math.round(Math.random()*100)+200}`
             let total = document.createElement("h3")
             total.textContent = amount.textContent
             document.getElementById("amount").append(amount)
