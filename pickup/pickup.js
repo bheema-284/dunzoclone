@@ -4,12 +4,17 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
         document.querySelector("body").style.backgroundColor="#d3d5db"
         document.getElementById("box1").style.backgroundColor="#d3d5db"
         document.getElementById("box2").style.backgroundColor="#d3d5db"
+        document.getElementById("cont").style.backgroundColor="#d3d5db"
     }
     document.getElementById("closepickup").addEventListener("click",()=>{
         document.getElementById("div1").style.display="none"
         document.querySelector("body").style.backgroundColor=""
         document.getElementById("box1").style.backgroundColor=""
         document.getElementById("box2").style.backgroundColor=""
+        document.getElementById("cont").style.backgroundColor=""
+        document.getElementById("div2").innerText=null
+        document.getElementById("div3").innerText=null
+        document.getElementById("div5").innerText=null;
     })
     document.getElementById("ddiv").addEventListener("click",getdroplocation)
     function getdroplocation(){
@@ -17,19 +22,24 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
         document.querySelector("body").style.backgroundColor="#d3d5db"
         document.getElementById("box1").style.backgroundColor="#d3d5db"
         document.getElementById("box2").style.backgroundColor="#d3d5db"
+        document.getElementById("cont").style.backgroundColor="#d3d5db"
     }
     document.getElementById("closedrop").addEventListener("click",()=>{
         document.getElementById("div6").style.display="none"
         document.querySelector("body").style.backgroundColor=""
         document.getElementById("box1").style.backgroundColor=""
         document.getElementById("box2").style.backgroundColor=""
+        document.getElementById("cont").style.backgroundColor=""
+        document.getElementById("div7").innerText=null
+        document.getElementById("div8").innerText=null
+        document.getElementById("div9").innerText=null;
     })
     document.getElementById("place").addEventListener("input",()=>{
-        debounce(getpickupresults,3000)
+        debounce(getpickupresults,1500)
     })
 
     document.getElementById("dropplace").addEventListener("input",()=>{
-        debounce(getdropresults,3000)
+        debounce(getdropresults,1500)
     })
 
    async function getpickupresults(){
@@ -45,6 +55,8 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
     }
         function appendpickupresults(results){
             document.getElementById("div2").innerHTML=null
+            document.getElementById("div3").innerHTML=null
+            document.getElementById("div5").innerHTML=null;
             results.map((elem)=>{
                 let box = document.createElement("div")
                 let p = document.createElement("p")
@@ -59,6 +71,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                         let iframe = document.createElement("iframe")
                         iframe.className="maps"
                         iframe.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDt-iuxli-lln4vvQiv79TTE6cmYWxOiz0&q=${elem.properties.formatted}`
+                        iframe.setAttribute("allowfullscreen",true)
                         document.getElementById("div2").append(iframe)
                         let div4 = document.createElement("div")
                         div4.className="div4"
@@ -70,6 +83,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                         name.placeholder = "Enter person name"
                         let mobile = document.createElement("input")
                         mobile.placeholder = "Enter mobile number"
+                        mobile.type="number"
                         let button = document.createElement("button")
                         button.className="continue"
                         button.textContent="Continue"
@@ -81,10 +95,11 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                 document.querySelector("body").style.backgroundColor=""
                 document.getElementById("box1").style.backgroundColor="white"
                 document.getElementById("box2").style.backgroundColor="white"
+                document.getElementById("cont").style.backgroundColor="white"
             })
             div4.append(hno,landmark,name,mobile)
-            document.getElementById("div5").append(button)
-            document.getElementById("div3").append(div4)
+                document.getElementById("div5").append(button)
+                document.getElementById("div3").append(div4)
                     }
                     else{
                document.getElementById("div2").innerHTML=null
@@ -114,6 +129,8 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
         }
         function appenddropresults(results){
             document.getElementById("div7").innerHTML=null
+            document.getElementById("div8").innerHTML=null
+            document.getElementById("div9").innerHTML=null;
             results.map((elem)=>{
                 let box = document.createElement("div")
                 let p = document.createElement("p")
@@ -128,6 +145,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                         let iframe2 = document.createElement("iframe")
                         iframe2.className="maps"
                         iframe2.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDt-iuxli-lln4vvQiv79TTE6cmYWxOiz0&q=${elem.properties.formatted}`
+                        iframe2.setAttribute("allowfullscreen",true)
                         document.getElementById("div7").append(iframe2)
                         let div10 = document.createElement("div")
             div10.className="div4"
@@ -139,6 +157,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
             name2.placeholder = "Enter person name"
             let mobile2 = document.createElement("input")
             mobile2.placeholder = "Enter mobile number"
+            mobile2.type="number"
             let button2 = document.createElement("button")
             button2.className="continue"
             button2.textContent="Continue"
@@ -150,6 +169,7 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                 document.querySelector("body").style.backgroundColor=""
                 document.getElementById("box1").style.backgroundColor="white"
                 document.getElementById("box2").style.backgroundColor="white"
+                document.getElementById("cont").style.backgroundColor="white"
                 let pay = document.createElement("button")
             pay.textContent="Pay Now"
             pay.id="paybutton"
