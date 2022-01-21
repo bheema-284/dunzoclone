@@ -1,19 +1,39 @@
 body {
-  background-color: rgb(253, 252, 252);
+  background-color: rgb(245, 243, 243);
+}
+#cont {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1%;
+  background-color: white;
+}
+#logo {
+  width: 10%;
+  margin-left: 10%;
+}
+#logo > img {
+  width: 100%;
+}
+#profile {
+  display: flex;
+  width: 90%;
+  justify-content: end;
+  margin-right: 10%;
 }
 #container {
   margin: auto;
   position: relative;
   width: 80%;
   height: 350px;
-  gap: 15px;
   font-size: 10px;
   display: flex;
 }
 #box2 {
   position: absolute;
   width: 30%;
-  margin-left: 70%;
+  margin-left: 71%;
   height: 100%;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -51,7 +71,6 @@ span {
 img {
   width: 100%;
   height: 30%;
-  margin-top: 18%;
 }
 #package {
   margin-left: 10px;
@@ -101,6 +120,7 @@ hr {
 #symbol {
   margin-top: 20px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 #instructions {
   width: 400px;
@@ -142,6 +162,9 @@ hr {
   width: 100%;
   text-align: center;
   font-family: "Poppins", sans-serif;
+}
+.div2:hover {
+  cursor: pointer;
 }
 .div2 > p {
   color: #878c9b;
@@ -213,4 +236,5 @@ hr {
   border: 1px solid transparent;
   border-radius: 30px;
   color: white;
+  margin-bottom: 30px;
 }
