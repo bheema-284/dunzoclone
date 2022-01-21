@@ -1,4 +1,4 @@
-body{
+    body{
     margin:auto;
 }
 #Mcontainer{
@@ -563,4 +563,85 @@ a{
 }
 #icon3:hover{
     color: #00d290;
+}
+
+
+/* location Popup */
+.place{
+    cursor: pointer;
+}
+#Search_loc_container{
+    width: 40%;
+    height: 650px;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid gray;
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#display_location{
+    display: flex;
+}
+#loc_name{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: large;
+}
+#loc_cancel{
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-top: 35px;
+    margin-left: 390px;
+
+}
+#search_location{
+    display: flex;
+}
+#loc_places{
+    width: 80%;
+    height: 45px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 1px solid #00d290;
+    padding-left: 50px;
+    font-size: large;
+    font-weight: bolder;
+    color: #00d290;
+}
+#Loc_places:hover{
+    border: 1px solid #00d290;
+}
+#loc_submit{
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid #00d290;
+    background-color: #00d290;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#loc_boy{
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    margin-top: 150px;
+    margin-left: 120px;
+}
+#loc_content{
+    color: gray;
+    font-size: large;
+    font-weight: bolder;
+    padding-left: 40px;
+    padding-top: 20px;
+
+
 }
