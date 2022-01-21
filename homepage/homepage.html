@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
-    <title>Home Page</title>
+    <title>Profile</title>
 </head>
 <body>
     <div id="Mcontainer">
         <!-- navbar -->
         <div id="Mnavbar">
-           
+            
         </div>
         
         <!-- navyBlue -->
@@ -19,9 +19,24 @@
             <img id="navy_icon" src="./images/HomeIcon.png">
             <h3 class="navy_text1">Order Paan items, munchies and much more on our new Dunzo Mo app</h3>
             <h3 class="navy_text2">Download Dunzo Mo app now ></h3>
-        </div>  
+        </div>
 
-        <!-- Login Popup -->
+        <!-- Location Popup -->
+        <div id="Search_loc_container">
+            <div id="display_location">
+                <h4 id="loc_name">Add your Location</h4>
+                <button id="loc_cancel">X</button>
+            </div>
+            <br>
+            <div id="search_location">
+                <input type="text" id="loc_places">
+                <button id="loc_submit">O</button>
+            </div>
+            <div id="loc_content"></div>
+            <img id="loc_boy" src="./images/location_boy.png">
+        </div>
+
+        <!-- Login Popup
         <div class="form-popup" id="myForm">
             <button id="cancel" type="button" class="btn cancel">X</button>
             <img id="login_img" src="https://resources.dunzo.com/web-assets/prod/_next/static/images/signin-icon-cb6e6a706f01b84896e60235a2392ac9.png">
@@ -41,7 +56,7 @@
             </form>
           </div>
 
-          <!-- OTP Popup -->
+    
           <div class="form-otp" id="myOTP">
             <button id="cancel_otp" type="button" class="btn cancel">X</button>
             <img id="login_img" src="https://resources.dunzo.com/web-assets/prod/_next/static/images/signin-icon-cb6e6a706f01b84896e60235a2392ac9.png">
@@ -60,7 +75,7 @@
               </div>
               <a href="homepage.html"><button id="accountpage">Verify and Continue</a></button>
              </form>
-        </div>
+        </div> -->
 
         <!-- MainImage -->
         <div id="MmainImg">
@@ -122,7 +137,7 @@
 <script type="module">
 
 // navbar Dynamic
-import navbar from './components/navbar.js';
+import navbar from './scripts/homepage.js';
 
 let navbar_container = document.getElementById('Mnavbar');
 
@@ -139,54 +154,113 @@ footer_container.innerHTML = footer()
 
 
 
-//Login Popup
-var openLogin = document.getElementById('nav_signin').addEventListener('click', openForm);
-var closeLogin = document.getElementById('cancel').addEventListener('click', closeForm);
+var location = document.getElementById('nav_location').addEventListener('click', displayLocation);
+var closeLocation = document.getElementById('loc_cancel').addEventListener('click', closelocation);
 
-function openForm() {
+function displayLocation(){
+
+    document.getElementById('Search_loc_container').style.display = 'block';
+    document.getElementById('MmainImg').style.display = "none";
+    document.getElementById('Mgrid1').style.display = "none";
+    document.getElementById('Mgrid2').style.display = "none";
+    document.getElementById('Mmobile').style.display = "none";
+}
+
+function closelocation(){
+    document.getElementById('Search_loc_container').style.display = 'none';
+    document.getElementById('MmainImg').style.display = "block";
+    document.getElementById('Mgrid1').style.display = "block";
+    document.getElementById('Mgrid2').style.display = "block";
+    document.getElementById('Mmobile').style.display = "block";
+}
+
+// //Login Popup
+// var openLogin = document.getElementById('nav_signin').addEventListener('click', openForm);
+// var closeLogin = document.getElementById('cancel').addEventListener('click', closeForm);
+
+// function openForm() {
     
-  document.getElementById("myForm").style.display = "block";
-  document.getElementById('MmainImg').style.display = "none";
-  document.getElementById('Mgrid1').style.display = "none";
-  document.getElementById('Mgrid2').style.display = "none";
-  document.getElementById('Mmobile').style.display = "none";
+//   document.getElementById("myForm").style.display = "block";
+//   document.getElementById('MmainImg').style.display = "none";
+//   document.getElementById('Mgrid1').style.display = "none";
+//   document.getElementById('Mgrid2').style.display = "none";
+//   document.getElementById('Mmobile').style.display = "none";
+// }
+// function closeForm() {
+//   document.getElementById("myForm").style.display = 'none';
+//   document.getElementById('MmainImg').style.display = "block";
+//   document.getElementById('Mgrid1').style.display = "block";
+//   document.getElementById('Mgrid2').style.display = "block";
+//   document.getElementById('Mmobile').style.display = "block";
+// }
+
+
+// //OTP Popup
+// var enterotp = document.getElementById('otpsubmit').addEventListener('click', enterOtp);
+// var cancelorp = document.getElementById('cancel_otp').addEventListener('click', submitForm);
+
+// function enterOtp(){
+//   document.getElementById("myForm").innerHTML = null;
+//   document.getElementById("myOTP").style.display = "block";
+//   document.getElementById("myForm").style.display = "none";
+//   document.getElementById('MmainImg').style.display = "none";
+//   document.getElementById('Mgrid1').style.display = "none";
+//   document.getElementById('Mgrid2').style.display = "none";
+//   document.getElementById('Mmobile').style.display = "none";
+// }
+
+// function submitForm(){
+//   document.getElementById("myForm").style.display = 'none';
+//   document.getElementById("myOTP").style.display = "none";
+//   document.getElementById('MmainImg').style.display = "block";
+//   document.getElementById('Mgrid1').style.display = "block";
+//   document.getElementById('Mgrid2').style.display = "block";
+//   document.getElementById('Mmobile').style.display = "block";
+// }
+
+
+let display_location = document.getElementById('loc_submit').addEventListener('click', displayMap);
+
+async function displayMap(){
+
+let places = document.getElementById('loc_places').value;
+
+let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${places}&appid=b583ff57ac8a4cb13f0ac928e8d36ddf&units=metric`);
+
+let data = await res.json();
+append(data)
+console.log(data);
 }
-function closeForm() {
-  document.getElementById("myForm").style.display = 'none';
-  document.getElementById('MmainImg').style.display = "block";
-  document.getElementById('Mgrid1').style.display = "block";
-  document.getElementById('Mgrid2').style.display = "block";
-  document.getElementById('Mmobile').style.display = "block";
+
+function append(e){
+
+    var div = document.createElement('div');
+
+    var place = document.createElement('h4');
+    place.textContent = e.name;
+    place.setAttribute('class', 'place');
+    
+    div.append(place);
+    document.getElementById('loc_content').append(div)
+
+    //  place.addEventListener('click', function(){
+    //      document.getElementById('location_place').textContent = e.name;
+    //  });
+
 }
 
 
-//OTP Popup
-var enterotp = document.getElementById('otpsubmit').addEventListener('click', enterOtp);
-var cancelorp = document.getElementById('cancel_otp').addEventListener('click', submitForm);
+//Search navigation
+document.getElementById('icon_search').addEventListener('click', function(){
 
-function enterOtp(){
-  document.getElementById("myForm").innerHTML = null;
-  document.getElementById("myOTP").style.display = "block";
-  document.getElementById("myForm").style.display = "none";
-  document.getElementById('MmainImg').style.display = "none";
-  document.getElementById('Mgrid1').style.display = "none";
-  document.getElementById('Mgrid2').style.display = "none";
-  document.getElementById('Mmobile').style.display = "none";
-}
+    window.location.href = 'search.html';
+})
 
-function submitForm(){
-  document.getElementById("myForm").style.display = 'none';
-  document.getElementById("myOTP").style.display = "none";
-  document.getElementById('MmainImg').style.display = "block";
-  document.getElementById('Mgrid1').style.display = "block";
-  document.getElementById('Mgrid2').style.display = "block";
-  document.getElementById('Mmobile').style.display = "block";
-}
+//cart navigation
+document.getElementById('nav_cart').addEventListener('click', function(){
+
+window.location.href = '#';
+})
+
 
 </script>
-
-
-
-
-
-

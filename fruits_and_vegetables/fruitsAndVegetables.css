@@ -22,7 +22,7 @@
 #vegetabless>div{
     display: flex;
     margin-top: 5%;
-    justify-content: right;
+    justify-content: left;
     
 }
 #fvCart img{
@@ -36,8 +36,8 @@
     margin-right: 0;
 }
 #vegetabless{
-    text-align: right;
-    border-left:1px solid black ;
+    text-align: left;
+    border-right:1px solid black ;
 }
 #fruitss{
     border-right: 1px solid black;

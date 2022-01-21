@@ -1,0 +1,219 @@
+body{
+    background-color: whitesmoke;
+}
+.nav
+{
+    display: flex;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+}
+.nav > div
+{
+    height: 100%;
+    width: 20%;
+}
+#logo
+{
+    text-align: center;
+}
+#logo > img
+{
+    margin-top: 15px;
+    margin-left: 50%;
+}
+#navsign
+{
+    margin-left: 50%;
+    text-align: center;
+}
+#navsign >button
+{
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00d290;
+}
+button:hover{
+    cursor: pointer;
+}
+.main
+{
+    display: flex;
+    height: 530px;
+    width: 100%;
+    border: solid 1px blue;
+    margin-top: 30px;
+}
+
+#left
+{
+    margin-left: 5%;
+    height: 100%;
+    width: 70%;
+}
+#left > div
+{
+    background-color: white;
+    display: flex;
+    margin-bottom: 20px;
+    height: 30%;
+    width: 100%;
+}
+#dot{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 10%;
+    
+}
+#one
+{
+    margin-left: 32%;
+    margin-top: 70%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;  
+    border: rgb(202, 200, 200) solid 5px;
+}
+#two
+{
+    margin-left:1%;
+    margin-top: 1%;
+    height: 11px;
+    width: 11px;
+    border-radius: 50px;
+    border: solid 5px #00d290;  
+}
+#signin
+{
+    height: 100%;
+    width: 90%;
+    padding-left: 20px;
+}
+h3{
+    font-size:x-large;
+    font-family: Gilroy,sans-serif;
+}
+p{
+    font-size:medium;
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+}
+#signin > button{
+
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00d290;
+}
+#address
+{
+    height: 100%;
+    width: 90%;
+    padding-left:20px ;
+}
+#address > button
+{
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00d290;
+}
+#payment
+{
+    padding-left: 20px;
+    height: 100%;
+    width: 90%;
+}
+#payment >button
+{
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00d290;
+}
+#right{
+    width: 30%;
+    margin-left: 30px;    
+    margin-right: 10%;
+}
+ 
+#top
+{
+    height: 100%;
+    border: red solid 1px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#cart
+{
+    height: 150px;
+    width: 99%;
+    background-color: white;
+    border: black solid 1px;
+    padding-left: 40px;
+}
+#check
+{
+    background-color: white;
+    margin-top: 20px;
+    height: 100px;
+    width: 99%;
+    border: black solid 1px;
+}
+#check >h4
+{
+    margin-top: -19px;
+    margin-left: 50px;
+}
+#box{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+#check>p
+{
+    line-height: 25px ;
+    margin-top: -20px;
+    padding-left: 10px;
+}
+#tip
+{
+    background-color: white;
+    margin-top: 20px;
+    height: 300px;
+    width: 99%;
+    border: black solid 1px;
+}
+#inst
+{
+    background-color: white;
+    margin-top: 20px;
+    height: 70px;
+    width: 99%;
+    border: black solid 1px;
+}
+#down
+{
+    background-color: white;
+    margin-top: 20px;
+    height: 70px;
+    width: 99%;
+    border: black solid 1px;
+}
