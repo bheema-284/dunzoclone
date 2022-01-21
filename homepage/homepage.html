@@ -82,6 +82,10 @@
             <img id="main_Img" src="./images/home1.jpg">
         </div>
 
+        <h1 id="city_name_msg"></h1>
+        <p id="city_details_msg"></p>
+        <p></p>
+
         <!-- Grid1 -->
         <div id="Mgrid1">
             <h1 id="name">Essentials delivered to your doorstep</h1>
@@ -153,7 +157,7 @@ footer_container.innerHTML = footer()
 
 
 
-
+//location display
 var location = document.getElementById('nav_location').addEventListener('click', displayLocation);
 var closeLocation = document.getElementById('loc_cancel').addEventListener('click', closelocation);
 
@@ -218,8 +222,11 @@ function closelocation(){
 //   document.getElementById('Mmobile').style.display = "block";
 // }
 
+let msg = document.getElementById('loc');
 
 let display_location = document.getElementById('loc_submit').addEventListener('click', displayMap);
+
+
 
 async function displayMap(){
 
@@ -239,6 +246,30 @@ function append(e){
     var place = document.createElement('h4');
     place.textContent = e.name;
     place.setAttribute('class', 'place');
+    // console.log(place);
+    var ida = place.innerHTML;
+    console.log(ida)
+
+    place.addEventListener('click', ()=>{
+        msg.textContent = ida;
+        document.getElementById('city_name_msg').textContent = ida;
+        document.getElementById('city_details_msg').textContent = 'Why step out when you can get everything delivered home with the tap of a button? Bangalore’s favourite delivery app gets you Food, Grocery, Medicine, Pet Supplies, Fruits & Vegetables, Meat & Fish, Health & Wellness, Gifts and Send Packages from one end of the city to the other. From your local kirana stores to your favourite brands, grocery shopping to your forgotten charger, we are always on the move for you. Why worry about your chores, when you can get it all Dun!';
+        document.getElementById('Search_loc_container').style.display = 'none';
+        document.getElementById('MmainImg').style.display = "block";
+        document.getElementById('Mgrid1').style.display = "block";
+        document.getElementById('Mgrid2').style.display = "block";
+        document.getElementById('Mmobile').style.display = "block";
+    })
+
+    // place.addEventListener('click', (e)=>{
+    //     msg.textContent = ida;
+    //     document.getElementById('Search_loc_container').style.display = 'none';
+    //     document.getElementById('MmainImg').style.display = "block";
+    //     document.getElementById('Mgrid1').style.display = "block";
+    //     document.getElementById('Mgrid2').style.display = "block";
+    //     document.getElementById('Mmobile').style.display = "block";
+    // })
+
     
     div.append(place);
     document.getElementById('loc_content').append(div)
@@ -248,6 +279,7 @@ function append(e){
     //  });
 
 }
+
 
 
 //Search navigation
