@@ -27,17 +27,29 @@ body{
     margin-left: 50%;
     text-align: center;
 }
-#navsign >button
+#navsign >div
 {
     color: white;
     font-size: 16px;
     font-weight: bolder;
-    margin-top: 10px;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: 20px;
-    background-color: #00d290;
+    margin-left: 300px;
+    margin-top: -70px;
+    height: 50px;
+    width: 50px;
+    border: #00d290 3px solid;
+    border-radius: 50%;
+}
+#navsign >div:hover
+{
+    cursor: pointer;
+}
+#navsign >div>img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+#navsign >h3{
+    margin-left: 100px;
 }
 button:hover{
     cursor: pointer;
@@ -58,10 +70,8 @@ button:hover{
 }
 #left > div
 {
-    background-color: white;
     display: flex;
     margin-bottom: 20px;
-    height: 30%;
     width: 100%;
 }
 #dot{
@@ -116,7 +126,8 @@ p{
 }
 #address
 {
-    height: 100%;
+    background-color: white;
+    height: 200px;
     width: 90%;
     padding-left:20px ;
 }
@@ -133,28 +144,79 @@ p{
 }
 #payment
 {
+    background-color: white;
     padding-left: 20px;
     height: 400px;
     width: 90%;
-    border: solid black 1px;
 }
 #card
 {
-    display: flex;
-    margin-bottom: 10px;
     height: 200px;
-    width: 60%;
-    border:  black dotted 4px;
-
+    width: 500px;
+    margin-bottom: 20px;
+    border: gray dashed 2px;
 }
-#card>input{
-    margin-top: 20px;
-    margin-left: 1px;
-    margin-right: 3px;
-    height: 30px;
+#cname
+{
+    display: flex;
+    height: 20%;
     width: 100%;
-    border: solid  #00d290 1px;
 }
+#cname>p{
+    margin-left: 10px;
+}
+#cname>input{
+    margin-top: 10px;
+    height: 20px;
+    margin-left: 40px;
+}
+#cnum{
+    display: flex;
+}
+#num{
+    margin-left: 10px;
+}
+#cnum>input{
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 10px;
+    height: 20px;
+    width: 100%;
+}
+#cdetails{
+    display: flex;
+}
+#cvv{
+    display: flex;
+}
+#cvv>p{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+#cvv>input{
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+#cdate{
+    display: flex;
+    margin-left: 40px;
+}
+#cdate>p{
+    margin-top: 30px;
+}
+#cdate>p{
+    margin-left: 10px;
+}
+#cdate>input{
+    text-align: center;
+    width: 20px;
+    margin-left: 10px;
+    height: 20px;
+    margin-top: 25px;
+}
+
 #payment >button
 {
     color: white;
