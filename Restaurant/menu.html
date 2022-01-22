@@ -238,9 +238,9 @@ button:hover{
        
         <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/no-items-in-cart-7e84056f44993b68d14184f9b2992af7.png" alt="">
         <ul id="ful">
-            <p>Your cart is empty Add items to get started</p>
+           
         </ul>
-        <button id="check"><h3 id="co"></h3></button>
+        <button id="co"></button>
     </div>
     </div>
 
@@ -249,6 +249,7 @@ button:hover{
 
 
 <script type="module">
+    // let fvCart=document.querySelector("#fvCart")
     import navbar from '../homepage/components/navbar.js';
 
     let nav_div = document.getElementById('Mnavbar');
@@ -257,12 +258,19 @@ button:hover{
 
     import cart_data from './component/menu.js';
 
+
+
     let n=0;
     let sum=0;
 
     let data_div=document.querySelector("#martdata");
   
     let co=document.querySelector("#co");
+    co.addEventListener("click",proceed)
+function proceed(){
+    window.location.href="../cart/cart.html";
+    
+}
 
     cart_data.forEach(el=>{
     // console.log(el)
@@ -283,11 +291,12 @@ button:hover{
     button.addEventListener("click",cta)
     function cta(){
         n+=1;
+        console.log(el.image)
         sum+=rn;
-        let li=document.createElement("p");
+        let li=document.createElement("li");
         fvCart.textContent=`${n} Item`
         co.textContent=` Checkout ₹${sum}`  
-        ful.innerHTML = null;    
+        
         li.textContent=`${el.name} || 1 kg || ₹${rn}.00`;        
         let rem=document.createElement("button")
         rem.textContent="Remove"
@@ -311,6 +320,7 @@ button:hover{
    div.append(img,div2);
    data_div.append(div)  
 })
+let fvCart=document.querySelector("#item");
   
   
 </script>
