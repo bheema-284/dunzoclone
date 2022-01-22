@@ -96,6 +96,14 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                 document.getElementById("box1").style.backgroundColor="white"
                 document.getElementById("box2").style.backgroundColor="white"
                 document.getElementById("cont").style.backgroundColor="white"
+                let pickobj = {
+                    hno:hno.value,
+                    landmark:landmark.value,
+                    address:elem.properties.formatted,
+                    name:name.value,
+                    mobile:mobile.value,
+                }
+                localStorage.setItem("pickdetails",JSON.stringify(pickobj))
             })
             div4.append(hno,landmark,name,mobile)
                 document.getElementById("div5").append(button)
@@ -170,13 +178,28 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
                 document.getElementById("box1").style.backgroundColor="white"
                 document.getElementById("box2").style.backgroundColor="white"
                 document.getElementById("cont").style.backgroundColor="white"
+                let dropobj = {
+                    hno2:hno2.value,
+                    landmark2:landmark2.value,
+                    address2:elem.properties.formatted,
+                    name2:name2.value,
+                    mobile2:mobile2.value
+                }
+                localStorage.setItem("dropdetails",JSON.stringify(dropobj))
                 let pay = document.createElement("button")
             pay.textContent="Pay Now"
             pay.id="paybutton"
             document.getElementById("pay").append(pay)
+            pay.addEventListener("click",()=>{
+                window.location.href="./cartpage.html"
+            })
             document.getElementById("rules").textContent=null
             let amount = document.createElement("p")
             amount.textContent = `₹ ${Math.round(Math.random()*100)+200}`
+            let totalobj = {
+                total:amount.textContent,
+            }
+            localStorage.setItem("total",JSON.stringify(totalobj))
             let total = document.createElement("h3")
             total.textContent = amount.textContent
             document.getElementById("amount").append(amount)
