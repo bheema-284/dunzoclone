@@ -9,6 +9,7 @@ document.getElementById("wallets").addEventListener("click",()=>{
     document.getElementById("image").src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/PayTM.png"
     document.getElementById("payname").textContent="Paytm"
     document.getElementById("linktext").textContent="Your Paytm account is not linked. Please Link your Account."
+    document.getElementById("paybutton").textContent = "Link Account"
 })
 document.getElementById("offers").addEventListener("click",()=>{
     document.getElementById("div1").style.display="none"
@@ -21,10 +22,11 @@ document.getElementById("offers").addEventListener("click",()=>{
     document.getElementById("image").src="https://ik.imagekit.io/dunzo/tr:w-72,h-72,cm-pad_resize_payment_ico/icons/R4_Icons/payment/Simpl.png"
     document.getElementById("payname").textContent="Simpl"
     document.getElementById("linktext").textContent="Your Simpl account is not linked. Please Link your Account."
+    document.getElementById("paybutton").textContent = "Link Account"
 })
 document.getElementById("cards").addEventListener("click",()=>{
     document.getElementById("dispay").style.display="none"
-    document.getElementById("div2").style.display="block"
+    document.getElementById("div2").style.display="flex"
     document.getElementById("div2").innerHTML=null
     document.getElementById("cards").style.backgroundColor="white"
     document.getElementById("wallets").style.backgroundColor="#f3f3f5"
