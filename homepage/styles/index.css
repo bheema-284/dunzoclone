@@ -159,6 +159,7 @@
     height: 400px;
     margin-top: 120px;
     font-family: 'Trebuchet MS', sans-serif;
+    cursor: pointer;
 }
 #name{
     font-size: x-large;
@@ -644,4 +645,24 @@ a{
     padding-top: 20px;
 
 
+}
+#loc{
+    padding-top: 10px;
+    color: #00d290;
+    font-size: medium;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#city_name_msg{
+    width: 65%;
+    margin: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+}
+#city_details_msg{
+    width: 65%;
+    margin: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    color: gray;
 }
