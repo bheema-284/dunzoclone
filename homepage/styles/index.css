@@ -159,6 +159,7 @@
     height: 400px;
     margin-top: 120px;
     font-family: 'Trebuchet MS', sans-serif;
+    cursor: pointer;
 }
 #name{
     font-size: x-large;
