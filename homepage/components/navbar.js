@@ -2,7 +2,7 @@ function navbar(){
 
     return `<img id="nav_img" src="./images/logo.png">
     <img id="nav_location" src="./images/location.png">
-    <p id="location_place"></p>
+    <h4 id="location_place"></h4>
     <h4 id="title1">Dunzo for Partners</h4>
     <h4 id="title2">Business with Dunzo </h4>
     <div id="nav_search">

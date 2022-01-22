@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../homepage/styles/index.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Gilroy, sans-serif;
+        }
+        #navigate{
+            border: 1px solid transparent;
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            font-size: 12px;
+            background-color: #F7FDFA;
+        }
+        #navigate > div{
+            margin-top: 18px;
+            margin-left: 230px;
+        }
+        a{
+            color: #00B37A;
+        }
+        #heading_cont{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 129px;
+            display: flex;
+            background-color: #F7FDFA;
+        }
+        #img_div{
+            border: 1px solid transparent;
+            width: 88px;
+            height: 88px;
+            margin-left: 230px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        #heading{
+            border: 1px solid transparent;
+            width: 324px;
+            height: 88px;
+            margin: 0px 0px 0px 24px;
+            line-height: 8px;
+        }
+        #container{
+            border: 1px solid transparent;
+            width: 100%;
+            height: 2000px;
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(2,600px);
+            grid-template-rows: repeat(10,153px);
+            grid-gap: 50px;
+            padding: 15px;
+        }
+        #container > .rest_div{
+            border: 1px solid transparent;
+            display: flex;
+            margin-left: 200px;
+            gap: 20px;
+            padding: 15px;
+            /* transition: 1s; */
+        }
+        .rest_div:hover{
+            /* transform: scale(1.1); */
+            border-radius: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .rest_name{
+            border: 1px solid transparent;
+            width: 250px;
+        }
+        .rest_name > h4{
+            margin-top: 0px;
+        }
+        .rest_img > img{
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Mnavbar"></div>
+
+    <div id="navigate">
+        <div>
+            <a href="">Home</a>
+            <i class="fas fa-arrow-right"></i>
+            <a href="">Chennai</a>
+            <i class="fas fa-arrow-right"></i>
+            <a href="">Food Delivery</a>
+        </div>
+    </div>
+
+    <div id="heading_cont">
+        <div id="img_div">
+            <img src="https://ik.imagekit.io/dunzo/icons/website/bluegreen/category/restaurants.png?tr=w-88,h-88,cm-pad_resize" alt="">
+        </div>
+        <div id="heading">
+            <h1>Food Delivery</h1>
+            <p>200 Restaurant</p>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/dW1jV0QyWWVaNHpkOHZrRmRrZW9Zdz09-1596000055586-store_image.jpg" width="125px" height="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Murudis Lunch Home</h4>
+                <p>South Indian Chitadripet</p>
+                <p>1.8 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/62b15813-e43c-4031-af5b-364e6bb7fe4f-1574921823340-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Kovai Pazhamudir Nilayam</h4>
+                <p>Vepery</p>
+                <p>1.2 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/aWJFZnY4RmFJYXdnUFg0NjNIejVzdz09-1606229029535-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Rekha Mithai</h4>
+                <p>South Indian Vepery</p>
+                <p>1 km</p>
+            </div> 
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/Qzg0VlR6YmhSRVI2aldjUThUOHJNQT09-1590152615043-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Shiva Sagar</h4>
+                <p>South Indian Periyamet</p>
+                <p>1.7 km</p>
+            </div> 
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/fdc21e5f-8d50-4d8b-b9e2-27378c45d374-1543489991066-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Sri Krishna Prasad</h4>
+                <p>South Indian George Town</p>
+                <p>1.7 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/7eb386a0-8be7-4d68-bd67-243a015a3070-1561021822384-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Sarvana Bhavan</h4>
+                <p>South Indian Egmore</p>
+                <p>1.9 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/aFlTTEN5RlAxRERSV2EwS3pTZnlKUT09-1591271379479-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Sangheeta Veg Restaurant</h4>
+                <p>South Indian Egmore</p>
+                <p>2.7 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/682114f9-10a5-4d6f-bcbd-2eb48ddadbba-1574919773004-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Kakada Ramprasad</h4>
+                <p>Mithai George Town</p>
+                <p>2.6 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/TnEvTUE2MTIzZGpRTzVSYXBvTjR5dz09-1578996123916-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Ajnabi Mithai Pvt Ltd</h4>
+                <p>Mithai Sowcarpet</p>
+                <p>3.3 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/3dc2b6bb-7e85-4012-a22f-b15ecc5ce775-1566471859723-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Prayag</h4>
+                <p>North Indian Sowcarpet</p>
+                <p>2.5 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/eb463690-6ddf-43ac-a2c6-4defc4b5ee61-1616742380623-store_image.jpeg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Mamro's Mithai Vatika</h4>
+                <p>Sweet Sowcarpet</p>
+                <p>3 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/d87f7fe3-f95f-4d8e-a86e-30c47efb708a-1604641214952-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>McRennet</h4>
+                <p>Bakery Purusaiwalkam</p>
+                <p>2.6 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/999c2dc7-fef4-4709-9d77-9ff758e92bd7-1615981164269-store_image.jpeg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Agarwal Bhavan</h4>
+                <p>Sweets George Town</p>
+                <p>3.4 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/5336ebba-dcf1-4461-bdd1-e64243fb589c-1574082309503-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Pandian</h4>
+                <p>South Indian Egmore</p>
+                <p>1.8 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/e33a6e4f-a347-4184-8662-72374a41f271-1576844573341-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Hotel Ramalinga Vilas</h4>
+                <p>South Indian Choolai</p>
+                <p>2.6 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/a2R1Q21MNENjZDk3MjVucFB4b2NOdz09-1587035948587-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Bombay Halwa House</h4>
+                <p>Sowcarpet</p>
+                <p>3 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/RTJJTm9BeWtBcmE3ZTdSZVdtOW0rQT09-1573807053712-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Sri Keshav Chat</h4>
+                <p>Fast Food Choolai</p>
+                <p>1 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/d1JneUU1OHAzMmJvbFRnelBKVzdPQT09-1620730173347-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Grill Wagon</h4>
+                <p>North Indian Egmore</p>
+                <p>1.4 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/UXV0TDVxYnUxTTZyMFNSaDVFUmtSZz09-1620909348646-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>Shangai Express</h4>
+                <p>Chinese Egmore</p>
+                <p>1.4 km</p>
+            </div>
+        </div>
+        <div class="rest_div">
+            <div class="rest_img">
+                <img src="https://ik.imagekit.io/dunzo/dunzo-catalog-prod/tr:w-250,h-250,cm-pad_resize_store_thumbnail/stores/ac0083dc-3246-40ec-ad5e-ce9bf5a0ccfb-1559299366862-store_image.jpg" height="125px" width="125px">
+            </div>
+            <div class="rest_name">
+                <h4>AL Faham</h4>
+                <p>North Indian Vepery</p>
+                <p>2.5 km</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from '../homepage/scripts/homepage.js' //changes made by mugil ~changes:homepage.js
+
+    let nav_div = document.getElementById('Mnavbar');
+
+    nav_div.innerHTML = navbar();
+
+    import footer from '../homepage/components/footer.js';
+
+    let footer_div = document.getElementById('footer');
+
+    footer_div.innerHTML = footer();
+
+</script>
