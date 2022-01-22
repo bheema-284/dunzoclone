@@ -76,7 +76,9 @@ localStorage.setItem("SOI",`${sum}`)
 localStorage.setItem("SOI",`${sum}`)
             fvCart.textContent=`${n} Item`
         co.textContent=`₹${sum} Checkout`
-      
+        if(sum==0){
+    co.textContent=null;
+}
           
         }
         obj={
@@ -93,7 +95,7 @@ localStorage.setItem("SOI",`${sum}`)
      
         let li=document.createElement("li");
        
-        li.textContent=`${el.selection2} || 1 kg || ₹${rn}`;
+        li.textContent=`${el.selection2} || 1 kg || ₹${rn}||`;
         li.append(rem)
         ful.append(li)
        
@@ -134,6 +136,7 @@ veggies.forEach(el=>{
 
 
         }
+        
       
       
       
@@ -145,7 +148,7 @@ localStorage.setItem("SOI",`${sum}`)
         co.textContent=`₹${localStorage.getItem("SOI")} Checkout`
     let RO=JSON.parse(localStorage.getItem(`Item${n}`))
 
-        li.textContent=`${RO.name} || 1 kg || ₹${RO.price}`;
+        li.textContent=`${RO.name} || 1 kg || ₹${RO.price}||`;
         let rem=document.createElement("button")
         rem.textContent="Remove"
         rem.addEventListener("click",remo);
@@ -161,6 +164,10 @@ localStorage.setItem("SOI",`${sum}`)
             console.log(sum,n)
             fvCart.textContent=`${n} Item`
         co.textContent=`₹${sum} Checkout`
+        if(sum==0){
+    co.textContent=null;
+}
+
         
         }
        
