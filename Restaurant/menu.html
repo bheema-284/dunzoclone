@@ -250,6 +250,7 @@ button:hover{
 
 
 <script type="module">
+   
     // let fvCart=document.querySelector("#fvCart")
     import navbar from '../homepage/components/navbar.js';
 
@@ -258,6 +259,10 @@ button:hover{
     nav_div.innerHTML = navbar();
 
     import cart_data from './component/menu.js';
+    document.getElementById('nav_img').addEventListener('click', function(){
+
+window.location.href = '../homepage/homepage.html';
+})
 let obj={}
 
 
