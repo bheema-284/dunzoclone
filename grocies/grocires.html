@@ -126,7 +126,8 @@ footer_container.innerHTML = footer()
         sum+=rn;
         let li=document.createElement("p");
         fvCart.textContent=`${n} Item`
-        co.textContent=` Checkout ₹${sum}`  
+        co.textContent=` Checkout ₹${sum}`
+        //co.setAttribute('id', 'checkoutBut')  
         ful.innerHTML = null;    
         li.textContent=`${el.selection1} || 1 kg || ₹${rn}.00`;        
         let rem=document.createElement("button")
@@ -140,7 +141,18 @@ footer_container.innerHTML = footer()
             console.log(sum,n)
             fvCart.textContent=`${n} Item`
         co.textContent=` Checkout ₹${sum}`
+        co.addEventListener('click', checkoutBut)
+
+        // function checkoutBut(){
+        //     window.location.href = '../cart/checkout.html'
+
+        // }
         }
+        var payment = document.getElementById('check').addEventListener('click', payment);
+         function payment(){
+          window.location.href = "../cart/cart.html"
+           }
+
         console.log(sum,n)
         li.append(rem)
         ful.append(li)
