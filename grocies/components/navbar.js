@@ -4,7 +4,8 @@ function navbar(){
 
 
     <div id="navb">
-    <img id="nav_img" src="./images/logo.png">
+    <a href="../homepage/homepage.html"><img id="nav_img" src="./images/logo.png"></a>
+    
     <img id="nav_location" src="./images/location.png">
     <div id = "tit">
     <h4 id="title1">Dunzo for Partners</h4>
