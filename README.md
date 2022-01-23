@@ -44,4 +44,4 @@ We were six members in team:
 4. The repository folder is cloned
 5. Open in VS Code
 6. Open homepage > index.html with live server on your local system 
-7. View in browser
+7. View in browser and signup to access all features.
