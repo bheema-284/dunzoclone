@@ -33,11 +33,10 @@ function map(e,i){
     cont.append(list3)
 }
 
-var ammt=JSON.parse(localStorage.getItem("SOI"))
+var ammt1=JSON.parse(localStorage.getItem("SOI"))
 var cost=document.querySelector("#amt");
-if(ammt!==null){
-    cost.append(ammt)
-}
+
+
 
 
 
@@ -78,11 +77,10 @@ function map(e,i){
     cont.append(list3)
 }
 
-var ammt=JSON.parse(localStorage.getItem("SOII"))
+var ammt2=JSON.parse(localStorage.getItem("SOII"))
 var cost=document.querySelector("#amt");
-if(ammt!==null){
-    cost.append(ammt)
-}
+
+
 
 
 var arr={
@@ -121,10 +119,12 @@ function map(e,i){
     cont.append(list3)
 }
 
-var ammt=JSON.parse(localStorage.getItem("SOIII"))
+var ammt3=JSON.parse(localStorage.getItem("SOIII"))
 var cost=document.querySelector("#amt");
-if(ammt!==null){
-    cost.append(ammt)
+
+var fprice=ammt1+ammt2+ammt3;
+if(fprice!==null){
+    cost.append(fprice)
 }
 
 
