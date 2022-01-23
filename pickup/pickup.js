@@ -236,5 +236,5 @@ document.getElementById("pdiv").addEventListener("click",getlocation)
     }
 
     document.getElementById("logo").addEventListener("click",()=>{
-        window.location.href="../homepage/index.html"
+        window.location.href="../homepage/homepage.html"
     })
