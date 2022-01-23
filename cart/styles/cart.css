@@ -469,3 +469,7 @@ a{
     text-decoration: none;
     color: white;
 }
+#cart{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
