@@ -148,7 +148,7 @@
        
         <img src="https://resources.dunzo.com/web-assets/prod/_next/static/images/no-items-in-cart-7e84056f44993b68d14184f9b2992af7.png" alt="">
         <ul id="ful">
-            <p>Your cart is empty Add items to get started</p>
+            
         </ul>
         <button id="check"><h3 id="co"></h3></button>
     </div>
@@ -219,7 +219,7 @@ let navbar_container = document.getElementById('Mnavbar');
 
 navbar_container.innerHTML = navbar()
 
-
+let obj={}
 // footer Dynamic
 import footer from './components/footer.js';
 
@@ -244,8 +244,18 @@ footer_container.innerHTML = footer()
     button.addEventListener("click",cta)
     
     function cta(){
+      obj={
+            img:el.image,
+            name:el.selection1,
+            price:rn
+
+
+        }
         n+=1;
         sum+=rn;
+        localStorage.setItem(`Items${n+200}`,JSON.stringify(obj))
+      localStorage.setItem("NOIII",`${n}`)
+localStorage.setItem("SOIII",`${sum}`)
         let co=document.querySelector("#co");
         let checkout=document.querySelector("#check");
         let li=document.createElement("p");
@@ -258,9 +268,12 @@ footer_container.innerHTML = footer()
         rem.addEventListener("click",remo);
         function remo(){
             li.remove()
+            localStorage.removeItem(`Items${n+200}`)
             n-=1;
             
             sum-=rn;
+            localStorage.setItem("SOIII",`${sum}`)
+            localStorage.setItem("NOIII",`${n}`)
             console.log(sum,n)
             fvCart.textContent=`${n} Item`
         co.textContent=` Checkout ₹${sum}`
