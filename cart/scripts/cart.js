@@ -34,3 +34,8 @@ function map(e,i){
 var ammt=JSON.parse(localStorage.getItem("SOI"))
 var cost=document.querySelector("#amt");
 cost.append(ammt)
+
+function checkout(){
+    window.location.href="..checkout/checkout.html";
+    
+}
