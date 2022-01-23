@@ -131,6 +131,10 @@
     footer_div.innerHTML = footer();
 
     import rest_data from './component/restaurant.js';
+    document.getElementById('nav_img').addEventListener('click', function(){
+
+window.location.href = '../homepage/homepage.html';
+})
     console.log('rest_data:', rest_data);
 
     rest_data.forEach(el => {

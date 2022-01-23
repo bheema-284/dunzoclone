@@ -2,7 +2,7 @@ var c=JSON.parse(localStorage.getItem("NOI"))
 console.log(c);
 var arr={
     
-}
+};
 arr=JSON.parse(localStorage.getItem("Item1"))
 for(var i=1; i<=c; i++){
     var itm=i;
@@ -45,7 +45,7 @@ if(ammt!==null){
 
 var arr={
     
-}
+};
 var c=JSON.parse(localStorage.getItem("NOII"))
 console.log(c);
 for(var i=1; i<=c; i++){
@@ -87,7 +87,7 @@ if(ammt!==null){
 
 var arr={
     
-}
+};
 
 var c=JSON.parse(localStorage.getItem("NOIII"))
 console.log(c);
