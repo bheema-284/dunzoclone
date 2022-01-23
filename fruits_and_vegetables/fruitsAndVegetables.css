@@ -11,7 +11,7 @@ body button{
     border:solid whitesmoke;
 }
 #fruitss,#vegetabless,#fvCart{
-    height: 700px;
+    height: 1000px;
     overflow:scroll;
 }
 
