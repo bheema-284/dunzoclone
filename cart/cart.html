@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+</head>
+<link rel="stylesheet" href="styles/cart.css">
+<body>
+    <div class="container">
+        <div class="nav">
+            <div id="logo">
+                <a href="../homepage/homepage.html"><img  src="images/logo.PNG" alt=""></a>
+            </div>
+            <div id="navsign">
+                <h3>Your Profile</h3>
+                <div>
+                    <img src=
+                    "data:image/jpeg;base64,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" alt="">
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="main">
+            <div id="left">
+                <!-- <div id="first">
+                    <div id="dot">
+                        <div id="one">
+                            <div id="two"></div>
+                        </div>
+
+                    </div>
+                    <div id="signin">
+                        <h3>Sign in to place your order</h1>
+                        <p>Sign in to proceed</p>
+                        <button>Sign in</button>
+                    </div>
+                    </div> -->
+                
+                <div>
+                    <div id="dot">
+                        <div id="one">
+                            <div id="two"></div>
+                        </div>
+                    </div>
+                    <div id="address">
+                        <h3>Delivery Address</h1>
+                        <p>Big Bazzar Street,Near Metro Station,Mumbai,</p>
+                        <p>pin : 400002 ,Phone: 786440079</p>
+                        <button>Change Address</button>
+                    </div>
+                </div>
+                <div>
+                    <div id="dot">
+                        <div id="one">
+                            <div id="two"></div>
+                        </div>
+                    </div>
+                    <div id="payment">
+                        <h3>Payment</h3>
+                        <p><b>Enter card details</b></p>
+                        <div id="card">
+                        <div id="cname">
+                            <p><b>Cardholder Name</b></p>                    
+                            <input type="text" placeholder="Enter Cardholder name">
+                        </div>
+                        <p id="num"><b>Card Number</b></p><br>
+                        <div id="cnum">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                            <input type="text" placeholder="_">
+                        </div>
+                        <div id="cdetails">
+                            <div id="cvv">
+                                <p><b>Enter CVV</b></p>
+                                <input type="text" placeholder="CVV">
+                            </div>
+                            <div id="cdate">
+                                <p><b>Expired Date</b></p>
+                                <input type="text" placeholder="M">
+                                <input type="text" placeholder="M">
+                                <p><b>\</b></p>
+                                <input type="text" placeholder="Y">
+                                <input type="text" placeholder="Y">
+                            </div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        </div>
+                        <a href="checkout.html"><button>Make Payment</a></button>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="top">
+                    <div id="cart">
+                        <h3>Your Cart</h3>
+                        <div id="count"></div>
+                        <div id="pname"></div>
+                        <div id="pprice"></div>
+                    </div>
+                    <div id="check">
+                        <input id="box" type="checkbox">
+                        <h4>No contact Delivery</h4>
+                        <p>The partner will check with you and leave the parcel outside the door.</p>
+                    </div>
+                    <div id="tip">
+                        <img id="hand" src="images/handshake.jpg" alt="">
+                        <p>Thank your partner with a tip</p>
+                        <div>
+                            <div id="cookie">
+                                <img src="images/cookie.jpg" alt="">
+                                <p>₹10</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="tea">
+                                <img src="images/tea.png" alt="">
+                                <p>₹20</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="ice">
+                                <img src="images/icecream.png" alt="">
+                                <p>₹35</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="choco">
+                                <img src="images/choco.jpg" alt="">
+                                <p>₹75</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="basket">
+                                <img src="images/basket.jpg" alt="">
+                                <p>₹150</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="gift">
+                                <img src="images/gift.jpg" alt="">
+                                <p>₹500</p>
+                            </div>
+                        </div>
+                        <div class="ctip">
+                            <div id="letter">
+                                <img src="images/heart.png" alt="">
+                                <input type="text" placeholder="Custom Tip">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="inst">
+                        <input type="textbox" placeholder="Any Instructions? Eg: Don't ring the doorbell
+                        ">
+                    </div>
+                </div>
+                <div id="down">
+                    <div>
+                        <div><img src="images/inv.PNG" alt=""></div>
+                        <h2>Invoice</h2>                        
+                    </div>
+                    <div id="pay">
+                        <p>To pay<p>
+                        <p id="amt">₹</p>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="scripts/cart.js">
+
+    
+</script>
