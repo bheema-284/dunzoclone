@@ -11,7 +11,7 @@
     <div class="container">
         <div class="nav">
             <div id="logo">
-                <img  src="images/logo.PNG" alt="">
+                <a href="../homepage/homepage.html"><img  src="images/logo.PNG" alt=""></a>
             </div>
             <div id="navsign">
                 <h3>Your Profile</h3>
@@ -102,8 +102,7 @@
                         <div></div>
                         <div></div>
                         </div>
-                        
-                        <button onclick="Checkout()">Make Payment</button>
+                        <a href="checkout.html"><button>Make Payment</a></button>
                     </div>
                 </div>
             </div>
@@ -111,9 +110,9 @@
                 <div id="top">
                     <div id="cart">
                         <h3>Your Cart</h3>
-                        <div id="cartmain">
-
-                        </div>
+                        <div id="count"></div>
+                        <div id="pname"></div>
+                        <div id="pprice"></div>
                     </div>
                     <div id="check">
                         <input id="box" type="checkbox">
@@ -172,6 +171,14 @@
                     </div>
                 </div>
                 <div id="down">
+                    <div>
+                        <div><img src="images/inv.PNG" alt=""></div>
+                        <h2>Invoice</h2>                        
+                    </div>
+                    <div id="pay">
+                        <p>To pay<p>
+                        <p id="amt">₹</p>
+                    </div>
 
                 </div>
                 
@@ -182,4 +189,5 @@
 </html>
 <script src="scripts/cart.js">
 
+    
 </script>

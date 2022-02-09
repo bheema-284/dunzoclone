@@ -397,3 +397,79 @@ p{
     padding-left: 10px;
     font-size:medium;
 }
+
+#cart{
+    display: flex;
+    padding-top: -10px;
+    padding-left: 100px;
+    border: black solid 1px;
+}
+#count{  
+    margin-left: -200px;
+    margin-top: 70px;
+    height: 49%;
+    font-size:medium;
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+    font-weight: bolder;
+    width: 10%;
+}
+#pname{  
+    margin-left: 10px;
+    margin-top: 70px;
+    height: 49%;
+    font-size:medium;
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+    font-weight: bolder;
+    width: 50%;
+}
+#pprice{
+    margin-top: 70px;
+    height: 49%;
+    font-size:medium;
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+    font-weight: bolder;
+    width: 20%;
+}
+#down{
+    height: 100px;
+    width: 100%;
+}
+#down>div{
+    display: flex;
+}
+#down>div>div{
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+#down>div>h2{   
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-left:30px;
+}
+#pay{
+    margin-top: -10px;
+    margin-left: 10px;
+    font-size:medium;
+    font-family: Gilroy,sans-serif;
+    color: rgb(66, 63, 63);
+    font-weight: bolder;
+}
+#amt{
+    margin-left: 200px;
+    height: 30px;
+    width: 30px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#cart{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

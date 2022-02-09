@@ -12,7 +12,11 @@ function proceed(){
 }
 
 let obj={};
-let arrOffv=[]
+let nb=document.querySelector("#nb");
+nb.addEventListener("click",()=>{
+    window.location.href="../homepage/homepage.html"
+})
+
   import {veggies,fruits} from "./fruitsAndVegetables.js"
 fruits.forEach(el=>{
     let div=document.createElement("div");
